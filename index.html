@@ -2,19 +2,35 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phuong Viet IT&E - Công nghệ & Môi trường</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#22c55e">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <title>Trang chủ - Phuong Viet IT&E</title>
+    <link rel="shortcut icon" href="./images/website/logo.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
 </head>
-<body class="bg-gray-900 text-gray-100">
+<body class="bg-gray-900 text-gray-100 overflow-x-hidden">
     <!-- Navigation -->
     <nav id="navbar" class="fixed w-full z-50 top-0 left-0 px-4 py-3 bg-gray-900/95 backdrop-blur-sm transition-all duration-300">
-        <div class="container mx-auto flex items-center justify-between">
-            <a href="index.html" class="text-2xl font-bold text-green-500">
+        <div class="container mx-auto flex items-center justify-between relative">
+            <a href="index.html" class="text-2xl font-bold text-green-500 z-10">
                 <img src="./images/website/logo.png" alt="Phuong Viet IT&E Logo" class="h-12 w-auto">
             </a>
             <div class="hidden md:flex items-center space-x-2">
@@ -28,80 +44,93 @@
                 <a href="blog.html" class="nav-link">Blog</a>
                 <a href="contact.html" class="nav-link">Liên hệ</a>
             </div>
-            <button id="mobile-menu-btn" class="md:hidden text-2xl">
+            <button id="mobile-menu-btn" class="md:hidden text-2xl z-10">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden w-full mt-2">
-            <div class="flex flex-col space-y-4 px-4 py-2">
-                <a href="index.html" class="mobile-nav-link active">Trang chủ</a>
-                <a href="about.html" class="mobile-nav-link">Giới thiệu</a>
-                <a href="services.html" class="mobile-nav-link">Dịch vụ</a>
-                <a href="capabilities.html" class="mobile-nav-link">Năng lực</a>
-                <a href="blog.html" class="mobile-nav-link">Blog</a>
-                <a href="contact.html" class="mobile-nav-link">Liên hệ</a>
+        <div id="mobile-menu" class="hidden md:hidden fixed left-0 right-0 top-[72px] bg-gray-900/95 backdrop-blur-sm py-4 border-t border-gray-800">
+            <div class="container mx-auto">
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html" class="mobile-nav-link active">Trang chủ</a>
+                    <a href="about.html" class="mobile-nav-link">Giới thiệu</a>
+                    <a href="services.html" class="mobile-nav-link">Dịch vụ</a>
+                    <a href="capabilities.html" class="mobile-nav-link">Năng lực</a>
+                    <a href="blog.html" class="mobile-nav-link">Blog</a>
+                    <a href="contact.html" class="mobile-nav-link">Liên hệ</a>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="min-h-screen flex items-center pt-20 pb-10 px-4">
+    <section class="min-h-screen pt-32 px-4 flex items-center bg-gradient-to-b from-gray-900 to-gray-800">
         <div class="container mx-auto">
             <div class="grid md:grid-cols-2 gap-8 items-center">
-                <div data-aos="fade-right">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-6">
-                        <span class="text-green-500">Giải pháp</span> Công nghệ và Môi trường Toàn diện
+                <div class="text-center md:text-left" data-aos="fade-right">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                        Đồng hành cùng <br>
+                        <span class="text-green-500">Doanh nghiệp</span> của bạn<br>
+                        trên hành trình số
                     </h1>
-                    <p class="text-gray-400 text-lg mb-8">
-                        Phuong Viet IT&E tự hào là đơn vị tiên phong tại Việt Nam trong việc kết hợp công nghệ thông tin và giải pháp môi trường
+                    <p class="text-gray-400 text-lg mb-8 max-w-lg mx-auto md:mx-0">
+                        Chúng tôi cung cấp giải pháp toàn diện về công nghệ thông tin và môi trường, 
+                        giúp doanh nghiệp của bạn phát triển bền vững
                     </p>
-                    <a href="contact.html" class="btn-primary">
-                        Liên hệ ngay
-                        <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-                <div data-aos="fade-left" class="relative">
-                    <div class="neumorph-card p-4">
-                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000" 
-                             alt="Technology & Environment" 
-                             class="w-full h-auto rounded-lg">
+                    <div class="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
+                        <a href="services.html" class="btn-primary text-center">
+                            Khám phá dịch vụ
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="contact.html" class="btn-primary text-center bg-gray-800 hover:bg-gray-700">
+                            Liên hệ ngay
+                            <i class="fas fa-phone ml-2"></i>
+                        </a>
                     </div>
+                </div>
+                <div class="hidden md:block text-center" data-aos="fade-left">
+                    <img src="./images/website/logo.png" 
+                         alt="Phuong Viet IT&E Hero Image" 
+                         class="w-full max-w-lg mx-auto filter drop-shadow-2xl animate-float">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Featured Services -->
-    <section class="py-20 px-4 bg-gray-800/50">
+    <!-- Partners Section -->
+    <section class="py-16 px-4 bg-gray-800/50">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">
-                Dịch vụ nổi bật
+            <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">
+                Đối tác của chúng tôi
             </h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Service 1 -->
-                <div class="neumorph-card p-6" data-aos="zoom-in">
-                    <i class="fas fa-laptop-code text-4xl text-green-500 mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-3">Phát triển phần mềm</h3>
-                    <p class="text-gray-400">Website, ứng dụng di động và hệ thống quản lý doanh nghiệp</p>
+                <div class="neumorph-card p-6 text-center" data-aos="zoom-in">
+                    <img src="./images/Đối Tác Cao Đẳng CEA.png" 
+                         alt="Cao Đẳng CEA" 
+                         class="h-20 w-auto mx-auto mb-4 filter grayscale hover:grayscale-0 transition-all">
+                    <h3 class="text-lg font-semibold mb-2">Cao Đẳng CEA</h3>
+                    <p class="text-gray-400">Đối tác đào tạo nguồn nhân lực</p>
                 </div>
-                <!-- Service 2 -->
-                <div class="neumorph-card p-6" data-aos="zoom-in" data-aos-delay="100">
-                    <i class="fas fa-project-diagram text-4xl text-green-500 mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-3">Tư vấn dự án CNTT</h3>
-                    <p class="text-gray-400">Tư vấn, thiết kế và quản lý dự án CNTT chuyên nghiệp</p>
+                <div class="neumorph-card p-6 text-center" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="./images/Đối tác ESAT bán thiết bị điện tử.png" 
+                         alt="ESAT" 
+                         class="h-20 w-auto mx-auto mb-4 filter grayscale hover:grayscale-0 transition-all">
+                    <h3 class="text-lg font-semibold mb-2">ESAT</h3>
+                    <p class="text-gray-400">Đối tác cung cấp thiết bị điện tử</p>
                 </div>
-                <!-- Service 3 -->
-                <div class="neumorph-card p-6" data-aos="zoom-in" data-aos-delay="200">
-                    <i class="fas fa-leaf text-4xl text-green-500 mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-3">Đánh giá tác động môi trường</h3>
-                    <p class="text-gray-400">Khảo sát, phân tích và lập báo cáo ĐTM</p>
+                <div class="neumorph-card p-6 text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="./images/Đối tác phòng khám đa khoa Ngọc Nhân.png" 
+                         alt="Phòng khám Ngọc Nhân" 
+                         class="h-20 w-auto mx-auto mb-4 filter grayscale hover:grayscale-0 transition-all">
+                    <h3 class="text-lg font-semibold mb-2">Phòng khám Ngọc Nhân</h3>
+                    <p class="text-gray-400">Đối tác trong lĩnh vực y tế</p>
                 </div>
-                <!-- Service 4 -->
-                <div class="neumorph-card p-6" data-aos="zoom-in" data-aos-delay="300">
-                    <i class="fas fa-water text-4xl text-green-500 mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-3">Xử lý nước thải</h3>
-                    <p class="text-gray-400">Thiết kế và thi công hệ thống xử lý nước thải</p>
+                <div class="neumorph-card p-6 text-center" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="./images/Đối tác Tân Huê Viên.png" 
+                         alt="Tân Huê Viên" 
+                         class="h-20 w-auto mx-auto mb-4 filter grayscale hover:grayscale-0 transition-all">
+                    <h3 class="text-lg font-semibold mb-2">Tân Huê Viên</h3>
+                    <p class="text-gray-400">Đối tác trong lĩnh vực F&B</p>
                 </div>
             </div>
         </div>
@@ -115,71 +144,24 @@
                     Câu chuyện của chúng tôi
                 </h2>
                 <div class="mb-8 text-gray-400 space-y-4" id="company-story">
-                    <!-- Content will be loaded from companyStory data -->
+                    <!-- Company story content loaded from blog-posts.js -->
                 </div>
                 
-                <!-- Timeline -->
                 <div class="relative mt-12">
                     <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gray-800"></div>
                     <div class="space-y-12" id="milestones">
-                        <!-- Milestones will be loaded from companyStory data -->
+                        <!-- Milestones loaded from blog-posts.js -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Partners Section -->
+    <!-- Latest News -->
     <section class="py-16 px-4 bg-gray-800/50">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">
-                Đối tác của chúng tôi
-            </h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Partner 1 -->
-                <div class="neumorph-card p-6 text-center" data-aos="zoom-in">
-                    <img src="images/Đối Tác Cao Đẳng CEA.png" 
-                         alt="Cao Đẳng CEA"
-                         class="h-20 w-auto mx-auto mb-4 filter grayscale hover:grayscale-0 transition-all">
-                    <h3 class="text-lg font-semibold mb-2">Cao Đẳng CEA</h3>
-                    <p class="text-gray-400">Đối tác đào tạo nguồn nhân lực</p>
-                </div>
-
-                <!-- Partner 2 -->
-                <div class="neumorph-card p-6 text-center" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="images/Đối tác ESAT bán thiết bị điện tử.png" 
-                         alt="ESAT"
-                         class="h-20 w-auto mx-auto mb-4 filter grayscale hover:grayscale-0 transition-all">
-                    <h3 class="text-lg font-semibold mb-2">ESAT</h3>
-                    <p class="text-gray-400">Đối tác cung cấp thiết bị điện tử</p>
-                </div>
-
-                <!-- Partner 3 -->
-                <div class="neumorph-card p-6 text-center" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="images/Đối tác phòng khám đa khoa Ngọc Nhân.png" 
-                         alt="Phòng khám Ngọc Nhân"
-                         class="h-20 w-auto mx-auto mb-4 filter grayscale hover:grayscale-0 transition-all">
-                    <h3 class="text-lg font-semibold mb-2">Phòng khám Ngọc Nhân</h3>
-                    <p class="text-gray-400">Đối tác trong lĩnh vực y tế</p>
-                </div>
-
-                <!-- Partner 4 -->
-                <div class="neumorph-card p-6 text-center" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="images/Đối tác Tân Huê Viên.png" 
-                         alt="Tân Huê Viên"
-                         class="h-20 w-auto mx-auto mb-4 filter grayscale hover:grayscale-0 transition-all">
-                    <h3 class="text-lg font-semibold mb-2">Tân Huê Viên</h3>
-                    <p class="text-gray-400">Đối tác trong lĩnh vực F&B</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Latest News -->
-    <section class="py-16 px-4">
-        <div class="container mx-auto">
-            <div class="flex justify-between items-center mb-12">
-                <h2 class="text-3xl font-bold" data-aos="fade-right">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+                <h2 class="text-3xl font-bold mb-4 md:mb-0" data-aos="fade-right">
                     Tin tức mới nhất
                 </h2>
                 <a href="blog.html" class="btn-primary" data-aos="fade-left">
@@ -187,8 +169,8 @@
                     <i class="fas fa-arrow-right ml-2"></i>
                 </a>
             </div>
-            <div class="grid md:grid-cols-3 gap-8" id="latest-posts">
-                <!-- Latest posts will be loaded from blogPosts data -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="latest-posts">
+                <!-- Latest posts loaded from blog-posts.js -->
             </div>
         </div>
     </section>
@@ -215,7 +197,6 @@
     <footer class="bg-gray-900 py-12 px-4">
         <div class="container mx-auto">
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Logo and Company Name -->
                 <div>
                     <h4 class="text-xl font-semibold mb-4">Về chúng tôi</h4>
                     <div class="flex items-center mb-4">
@@ -225,7 +206,7 @@
                     <p class="text-gray-400">
                         Công ty TNHH Công nghệ thông tin và Môi trường Phương Việt
                     </p>
-                    <div class="flex space-x-4">
+                    <div class="flex space-x-4 mt-4">
                         <a href="#" class="text-green-500 hover:text-green-400">
                             <i class="fab fa-facebook"></i>
                         </a>
@@ -269,43 +250,7 @@
     </footer>
 
     <script src="./data/blog-posts.js"></script>
+    <script src="./js/home.js"></script>
     <script src="./js/main.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
-
-        // Load company story
-        document.getElementById('company-story').innerHTML = companyStory.content;
-
-        // Load milestones
-        document.getElementById('milestones').innerHTML = companyStory.milestones.map(milestone => `
-            <div class="relative" data-aos="fade-up">
-                <div class="absolute left-1/2 transform -translate-x-1/2 -mt-3">
-                    <div class="w-6 h-6 bg-green-500 rounded-full"></div>
-                </div>
-                <div class="ml-8 md:ml-0 md:w-1/2 ${milestone.year % 2 === 0 ? 'md:pr-12' : 'md:pl-12 md:ml-auto'} pb-8">
-                    <div class="neumorph-card p-6">
-                        <h3 class="text-xl font-bold mb-2">${milestone.year}</h3>
-                        <h4 class="text-green-500 font-semibold mb-2">${milestone.title}</h4>
-                        <p class="text-gray-400">${milestone.description}</p>
-                    </div>
-                </div>
-            </div>
-        `).join('');
-
-        // Load latest posts
-        const latestPosts = blogPosts.slice(0, 3);
-        document.getElementById('latest-posts').innerHTML = latestPosts.map(post => `
-            <article class="neumorph-card group" data-aos="fade-up">
-                <img src="${post.image}" alt="${post.title}" class="w-full h-48 object-cover rounded-t-lg">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-3 group-hover:text-green-500 transition-colors">${post.title}</h3>
-                    <p class="text-gray-400">${post.excerpt}</p>
-                </div>
-            </article>
-        `).join('');
-    </script>
 </body>
 </html>
