@@ -1,0 +1,150 @@
+/* Neumorphism Base Styles */
+.neumorph-card {
+    background: #1a1a1a;
+    border-radius: 16px;
+    box-shadow: 8px 8px 16px #0d0d0d,
+                -8px -8px 16px #272727;
+    transition: transform 0.3s ease;
+}
+
+.neumorph-card:hover {
+    transform: translateY(-5px);
+}
+
+.neumorph-btn {
+    background: #1a1a1a;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px #0d0d0d,
+                -5px -5px 10px #272727;
+    transition: all 0.3s ease;
+}
+
+.neumorph-btn:hover {
+    box-shadow: inset 5px 5px 10px #0d0d0d,
+                inset -5px -5px 10px #272727;
+}
+
+/* Navigation Styles */
+.nav-link {
+    color: #9ca3af;
+    font-weight: 500;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #22c55e;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #22c55e;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.mobile-nav-link {
+    color: #9ca3af;
+    font-weight: 500;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+    color: #22c55e;
+}
+
+/* Button Styles */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    background-color: #22c55e;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #16a34a;
+    transform: translateY(-2px);
+}
+
+/* Scroll to Top Button Animation */
+#scroll-to-top {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#scroll-to-top.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Speed Dial Animation */
+#speed-dial-menu {
+    transition: all 0.3s ease;
+}
+
+#speed-dial-menu.active {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Custom Scroll Bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #22c55e;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #16a34a;
+}
+
+/* Navbar Shadow on Scroll */
+.nav-shadow {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

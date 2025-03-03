@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu - Phuong Viet IT&E</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 top-0 left-0 px-4 py-3 bg-gray-900/95 backdrop-blur-sm transition-all duration-300">
+        <div class="container mx-auto flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-bold text-green-500">
+                <img src="./images/website/logo.png" alt="Phuong Viet IT&E Logo" class="h-12 w-auto">
+            </a>
+            <div class="hidden md:flex items-center space-x-2">
+                <span class="text-xl font-bold">Phuong Viet IT&E</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link">Trang chủ</a>
+                <a href="about.html" class="nav-link active">Giới thiệu</a>
+                <a href="services.html" class="nav-link">Dịch vụ</a>
+                <a href="capabilities.html" class="nav-link">Năng lực</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Liên hệ</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden w-full mt-2">
+            <div class="flex flex-col space-y-4 px-4 py-2">
+                <a href="index.html" class="mobile-nav-link">Trang chủ</a>
+                <a href="about.html" class="mobile-nav-link active">Giới thiệu</a>
+                <a href="services.html" class="mobile-nav-link">Dịch vụ</a>
+                <a href="capabilities.html" class="mobile-nav-link">Năng lực</a>
+                <a href="blog.html" class="mobile-nav-link">Blog</a>
+                <a href="contact.html" class="mobile-nav-link">Liên hệ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 px-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-8" data-aos="fade-up">
+                Về <span class="text-green-500">Chúng Tôi</span>
+            </h1>
+            <div class="max-w-3xl mx-auto text-gray-400" data-aos="fade-up" data-aos-delay="100">
+                <p class="text-lg">
+                    Công ty TNHH Công nghệ thông tin và Môi trường Phương Việt (Phuong Viet IT&E) là đơn vị tiên phong trong việc kết hợp công nghệ và giải pháp môi trường tại Việt Nam
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Info -->
+    <section class="py-16 px-4 bg-gray-800/50">
+        <div class="container mx-auto">
+            <div class="neumorph-card p-8" data-aos="fade-up">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h2 class="text-2xl font-bold mb-6">Thông tin công ty</h2>
+                        <ul class="space-y-4 text-gray-400">
+                            <li class="flex items-start">
+                                <i class="fas fa-building text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-semibold text-white">Tên công ty:</span><br>
+                                    Công ty TNHH Công nghệ thông tin và Môi trường Phương Việt
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-calendar-alt text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-semibold text-white">Ngày thành lập:</span><br>
+                                    23/09/2020 (đăng ký thay đổi lần 1: 08/09/2022)
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-id-card text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-semibold text-white">Mã số doanh nghiệp:</span><br>
+                                    1801682324
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-user text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-semibold text-white">Người đại diện:</span><br>
+                                    Trần Kim Tiêu Vân Phương
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-coins text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-semibold text-white">Vốn điều lệ:</span><br>
+                                    500.000.000 VNĐ
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img src="./images/Giấy chứng nhận đăng ký doanh nghiệp mặt trước.png" 
+                             alt="Office Building" 
+                             class="rounded-lg w-full h-full object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                             onclick="showImage(this.src, 'Giấy chứng nhận đăng ký doanh nghiệp')">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Vision -->
+                <div class="neumorph-card p-8" data-aos="fade-right">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-eye text-3xl text-green-500 mr-4"></i>
+                        <h2 class="text-2xl font-bold">Tầm nhìn</h2>
+                    </div>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <p>Trở thành đơn vị tư vấn CNTT và môi trường hàng đầu tại Việt Nam</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <p>Xây dựng đội ngũ nhân sự có trình độ chuyên môn cao</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <p>Trở thành nhà cung cấp dịch vụ đáng tin cậy cho các cơ quan nhà nước và doanh nghiệp lớn</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Mission -->
+                <div class="neumorph-card p-8" data-aos="fade-left">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-bullseye text-3xl text-green-500 mr-4"></i>
+                        <h2 class="text-2xl font-bold">Sứ mệnh</h2>
+                    </div>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <p>Cung cấp các giải pháp công nghệ sáng tạo, dễ áp dụng</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <p>Đóng góp vào sự phát triển bền vững của kinh tế Việt Nam</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <p>Hỗ trợ doanh nghiệp chuyển đổi số và nâng cao ý thức bảo vệ môi trường</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="py-16 px-4 bg-gray-800/50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">
+                Giá trị cốt lõi
+            </h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Trust -->
+                <div class="neumorph-card p-6 text-center" data-aos="zoom-in">
+                    <i class="fas fa-handshake text-4xl text-green-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Tín</h3>
+                    <p class="text-gray-400">Luôn giữ cam kết với khách hàng về chất lượng và thời gian</p>
+                </div>
+                <!-- Heart -->
+                <div class="neumorph-card p-6 text-center" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fas fa-heart text-4xl text-green-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Tâm</h3>
+                    <p class="text-gray-400">Kinh doanh dựa trên đạo đức, đảm bảo lợi ích hài hòa</p>
+                </div>
+                <!-- Intelligence -->
+                <div class="neumorph-card p-6 text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fas fa-brain text-4xl text-green-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Trí</h3>
+                    <p class="text-gray-400">Khuyến khích sáng tạo, không ngừng học hỏi</p>
+                </div>
+                <!-- Humanity -->
+                <div class="neumorph-card p-6 text-center" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fas fa-users text-4xl text-green-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Nhân</h3>
+                    <p class="text-gray-400">Đề cao yếu tố con người, tạo môi trường làm việc tích cực</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speed Dial -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button id="speed-dial-btn" class="neumorph-btn w-14 h-14 rounded-full flex items-center justify-center text-green-500 text-2xl hover:scale-110 transition-transform">
+            <i class="fas fa-plus"></i>
+        </button>
+        <div id="speed-dial-menu" class="hidden absolute bottom-16 right-0 space-y-4">
+            <a href="tel:0706780790" class="neumorph-btn w-12 h-12 rounded-full flex items-center justify-center text-green-500">
+                <i class="fas fa-phone"></i>
+            </a>
+            <a href="mailto:phuongviet.ite@gmail.com" class="neumorph-btn w-12 h-12 rounded-full flex items-center justify-center text-green-500">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="#" id="scroll-to-top" class="neumorph-btn w-12 h-12 rounded-full flex items-center justify-center text-green-500">
+                <i class="fas fa-arrow-up"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12 px-4">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Về chúng tôi</h4>
+                    <div class="flex items-center mb-4">
+                        <img src="./images/website/logo.png" alt="Phuong Viet IT&E Logo" class="h-16 w-auto mr-4">
+                        <span class="text-xl font-bold">Phuong Viet IT&E</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Công ty TNHH Công nghệ thông tin và Môi trường Phương Việt
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-green-500 hover:text-green-400">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-green-500 hover:text-green-400">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-green-500 hover:text-green-400">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Liên hệ</h4>
+                    <p class="text-gray-400 mb-2">
+                        <i class="fas fa-map-marker-alt text-green-500 mr-2"></i>
+                        133/2A Trần Hưng Đạo, P. An Phú, Q. Ninh Kiều, TP. Cần Thơ
+                    </p>
+                    <p class="text-gray-400 mb-2">
+                        <i class="fas fa-phone text-green-500 mr-2"></i>
+                        0706 780790
+                    </p>
+                    <p class="text-gray-400">
+                        <i class="fas fa-envelope text-green-500 mr-2"></i>
+                        phuongviet.ite@gmail.com
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Dịch vụ</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-green-500">Phát triển phần mềm</a></li>
+                        <li><a href="#" class="hover:text-green-500">Tư vấn dự án CNTT</a></li>
+                        <li><a href="#" class="hover:text-green-500">Đánh giá tác động môi trường</a></li>
+                        <li><a href="#" class="hover:text-green-500">Xử lý nước thải</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                © 2025 Phuong Viet IT&E. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Image viewer
+        function showImage(src, title) {
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-50';
+            modal.innerHTML = `
+                <div class="neumorph-card max-w-4xl w-full p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-semibold">${title}</h3>
+                        <button class="text-gray-400 hover:text-green-500" onclick="this.closest('.fixed').remove()">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                    <img src="${src}" alt="${title}" class="w-full rounded-lg">
+                </div>
+            `;
+            document.body.appendChild(modal);
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.remove();
+                }
+            });
+        }
+    </script>
+</body>
+</html>

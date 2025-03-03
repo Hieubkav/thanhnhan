@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ - Phuong Viet IT&E</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 top-0 left-0 px-4 py-3 bg-gray-900/95 backdrop-blur-sm transition-all duration-300">
+        <div class="container mx-auto flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-bold text-green-500">
+                <img src="./images/website/logo.png" alt="Phuong Viet IT&E Logo" class="h-12 w-auto">
+            </a>
+            <div class="hidden md:flex items-center space-x-2">
+                <span class="text-xl font-bold">Phuong Viet IT&E</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link">Trang chủ</a>
+                <a href="about.html" class="nav-link">Giới thiệu</a>
+                <a href="services.html" class="nav-link">Dịch vụ</a>
+                <a href="capabilities.html" class="nav-link">Năng lực</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link active">Liên hệ</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden w-full mt-2">
+            <div class="flex flex-col space-y-4 px-4 py-2">
+                <a href="index.html" class="mobile-nav-link">Trang chủ</a>
+                <a href="about.html" class="mobile-nav-link">Giới thiệu</a>
+                <a href="services.html" class="mobile-nav-link">Dịch vụ</a>
+                <a href="capabilities.html" class="mobile-nav-link">Năng lực</a>
+                <a href="blog.html" class="mobile-nav-link">Blog</a>
+                <a href="contact.html" class="mobile-nav-link active">Liên hệ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 px-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-8" data-aos="fade-up">
+                Liên hệ <span class="text-green-500">Với Chúng Tôi</span>
+            </h1>
+            <div class="max-w-3xl mx-auto text-gray-400" data-aos="fade-up" data-aos-delay="100">
+                <p class="text-lg">
+                    Hãy liên hệ với chúng tôi để được tư vấn và hỗ trợ tốt nhất cho doanh nghiệp của bạn
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Contact Form -->
+                <div class="neumorph-card p-8" data-aos="fade-right">
+                    <h2 class="text-2xl font-bold mb-6">Gửi tin nhắn cho chúng tôi</h2>
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-400 mb-2">Họ và tên *</label>
+                            <input type="text" id="name" name="name" required
+                                   class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:border-green-500 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition-colors">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-400 mb-2">Email *</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:border-green-500 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition-colors">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-400 mb-2">Số điện thoại *</label>
+                            <input type="tel" id="phone" name="phone" required
+                                   class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:border-green-500 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition-colors">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-gray-400 mb-2">Chủ đề</label>
+                            <select id="subject" name="subject"
+                                    class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:border-green-500 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition-colors">
+                                <option value="consultation">Tư vấn dịch vụ</option>
+                                <option value="quote">Yêu cầu báo giá</option>
+                                <option value="support">Hỗ trợ kỹ thuật</option>
+                                <option value="other">Khác</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-400 mb-2">Nội dung *</label>
+                            <textarea id="message" name="message" rows="5" required
+                                      class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:border-green-500 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition-colors"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full justify-center">
+                            Gửi tin nhắn
+                            <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <!-- Company Info -->
+                    <div class="neumorph-card p-8" data-aos="fade-left">
+                        <h3 class="text-xl font-semibold mb-6">Thông tin liên hệ</h3>
+                        <div class="flex items-center mb-6">
+                            <img src="./images/website/logo.png" alt="Phuong Viet IT&E Logo" class="h-16 w-auto mr-4">
+                            <span class="text-xl font-bold">Phuong Viet IT&E</span>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-green-500 mt-1 mr-4"></i>
+                                <div>
+                                    <p class="font-semibold">Địa chỉ:</p>
+                                    <p class="text-gray-400">133/2A Trần Hưng Đạo, Phường An Phú, Quận Ninh Kiều, TP. Cần Thơ</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-phone text-green-500 mt-1 mr-4"></i>
+                                <div>
+                                    <p class="font-semibold">Điện thoại:</p>
+                                    <p class="text-gray-400">0706 780790</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-envelope text-green-500 mt-1 mr-4"></i>
+                                <div>
+                                    <p class="font-semibold">Email:</p>
+                                    <p class="text-gray-400">phuongviet.ite@gmail.com</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-clock text-green-500 mt-1 mr-4"></i>
+                                <div>
+                                    <p class="font-semibold">Giờ làm việc:</p>
+                                    <p class="text-gray-400">Thứ 2 - Thứ 6: 8:00 - 17:00</p>
+                                    <p class="text-gray-400">Thứ 7: 8:00 - 12:00</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Map -->
+                    <div class="neumorph-card p-8" data-aos="fade-left" data-aos-delay="100">
+                        <h3 class="text-xl font-semibold mb-6">Bản đồ</h3>
+                        <div class="rounded-lg overflow-hidden h-[300px]">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.841518408634!2d105.77942631048407!3d10.031645790076927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0883d2192b5a1%3A0x436f0f2c75e3680!2zMTMzIFRy4bqnbiBIxrBuZyDEkOG6oW8sIEFuIFBow7osIE5pbmggS2nhu4F1LCBD4bqnbiBUaMahIDkwMDAwMCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1709444144565!5m2!1sen!2s"
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12 px-4">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Về chúng tôi</h4>
+                    <div class="flex items-center mb-4">
+                        <img src="./images/website/logo.png" alt="Phuong Viet IT&E Logo" class="h-16 w-auto mr-4">
+                        <span class="text-xl font-bold">Phuong Viet IT&E</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Công ty TNHH Công nghệ thông tin và Môi trường Phương Việt
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-green-500 hover:text-green-400">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-green-500 hover:text-green-400">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-green-500 hover:text-green-400">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Liên hệ</h4>
+                    <p class="text-gray-400 mb-2">
+                        <i class="fas fa-map-marker-alt text-green-500 mr-2"></i>
+                        133/2A Trần Hưng Đạo, P. An Phú, Q. Ninh Kiều, TP. Cần Thơ
+                    </p>
+                    <p class="text-gray-400 mb-2">
+                        <i class="fas fa-phone text-green-500 mr-2"></i>
+                        0706 780790
+                    </p>
+                    <p class="text-gray-400">
+                        <i class="fas fa-envelope text-green-500 mr-2"></i>
+                        phuongviet.ite@gmail.com
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Dịch vụ</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-green-500">Phát triển phần mềm</a></li>
+                        <li><a href="#" class="hover:text-green-500">Tư vấn dự án CNTT</a></li>
+                        <li><a href="#" class="hover:text-green-500">Đánh giá tác động môi trường</a></li>
+                        <li><a href="#" class="hover:text-green-500">Xử lý nước thải</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                © 2025 Phuong Viet IT&E. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Form validation and submission
+        const contactForm = document.getElementById('contact-form');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic validation
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+            
+            if (!name || !email || !phone || !message) {
+                alert('Vui lòng điền đầy đủ thông tin bắt buộc');
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Vui lòng nhập địa chỉ email hợp lệ');
+                return;
+            }
+            
+            // Phone validation
+            const phoneRegex = /^[0-9]{10,11}$/;
+            if (!phoneRegex.test(phone)) {
+                alert('Vui lòng nhập số điện thoại hợp lệ (10-11 số)');
+                return;
+            }
+            
+            // Here you would typically send the form data to a server
+            console.log('Form submitted:', {
+                name,
+                email,
+                phone,
+                subject: document.getElementById('subject').value,
+                message
+            });
+            
+            // Show success message
+            alert('Cảm ơn bạn đã liên hệ. Chúng tôi sẽ phản hồi sớm nhất có thể!');
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>
